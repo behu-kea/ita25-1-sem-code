@@ -1,0 +1,9 @@
+header {
+    display: flex;
+    justify-content: center;
+}
+
+header nav.main ul {
+    display: flex;
+}
+
