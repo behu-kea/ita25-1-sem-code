@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width: 500px) {
+        flex-direction: row;
+    }
+}
+
+
+
+
+@media screen and (max-width: 500px) {
+    .container {
+        background-color: red;
+    }
+
+    .intro {
+        flex-direction: row;
+    }
+}
