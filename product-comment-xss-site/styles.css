@@ -1,0 +1,68 @@
+:root{
+    --bg:#f7fafc;
+    --card:#ffffff;
+    --muted:#6b7280;
+    --accent:#0ea5a4;
+}
+*{box-sizing:border-box}
+body{
+    margin:0;
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+    background:var(--bg);
+    color:#0f172a;
+    padding:24px;
+}
+.wrap{max-width:700px;margin:0 auto}
+h1{margin:0 0 6px 0;font-size:20px}
+.muted{color:var(--muted);font-size:13px}
+.product{display:flex;gap:12px;align-items:center;margin:14px 0 18px}
+.product img{width:150px;height:150px;object-fit:cover;border-radius:8px;background:linear-gradient(135deg,#e6fffa,#cffafe)}
+.comment-box textarea{
+    width:100%;
+    min-height:80px;
+    padding:10px;
+    border-radius:8px;
+    border:1px solid #e6e9ee;
+    resize:vertical;
+    font-size:14px;
+}
+.actions{display:flex;justify-content:flex-end;margin-top:8px}
+button{
+    background:var(--accent);
+    color:white;
+    border:none;
+    padding:8px 12px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+}
+.comments{margin-top:12px;border-top:1px solid #eef2f7;padding-top:12px}
+.comment{
+    background:var(--card);
+    padding:10px;
+    border-radius:8px;
+    margin-bottom:8px;
+    border:1px solid #eef6f6;
+}
+
+/* user info box — static HTML (no JS required) */
+.user-info{
+    position:fixed;
+    top:12px;
+    right:12px;
+    background:rgba(255,255,255,0.95);
+    border-radius:8px;
+    padding:8px 12px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.08);
+    text-align:right;
+    font-size:13px;
+    color:#0f172a;
+    z-index:1000;
+}
+.user-info #username{
+    font-weight:700;
+}
+.user-info #email{
+    color:var(--muted);
+    font-size:12px;
+}

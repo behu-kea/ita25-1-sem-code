@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Product Review — Simple XSS Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="user-info" id="user-info" aria-hidden="false">
+    <div id="username">sneakyfox</div>
+    <div id="email">sneakyfox@example.com</div>
+</div>
+<main class="wrap">
+    <h1>Sweet Beats Headphones</h1>
+
+    <section class="product">
+        <img src="headphone.png" alt="Headphones">
+        <div class="desc">
+            <strong>Acme Wireless Headphones</strong>
+            <div class="muted">Comfortable, long battery life, great sound.</div>
+        </div>
+    </section>
+
+    <section class="comment-box">
+        <textarea id="comment" placeholder="Write your comment here"></textarea>
+        <div class="actions">
+            <button id="post">Post comment</button>
+        </div>
+    </section>
+
+    <section>
+        <h2>Comments</h2>
+        <div id="comments" class="comments" aria-live="polite">
+            <!-- Comments appended here with .innerHTML -->
+        </div>
+    </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
