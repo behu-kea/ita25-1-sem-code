@@ -1,0 +1,10 @@
+/*Vælg de html elemeenter der har klassen educations*/
+ul.educations {
+
+
+    li {
+        background-color: red;
+    }
+}
+
+

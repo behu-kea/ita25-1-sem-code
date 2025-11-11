@@ -7,20 +7,30 @@ const comments = [];
 function render() {
     let html = '';
     comments.forEach(comment => {
-        html += `<div class="comment">${comment}</div>`;
+        html = html + `<div class="comment">${comment}</div>`;
     });
+    console.log(html)
     commentsContainer.innerHTML = html;
 }
 
 postBtn.addEventListener('click', () => {
-    const text = commentEl.value || '';
+    const text = commentEl.value;
     comments.push(text);
     render();
     commentEl.value = '';
 });
 
-comments.push('Great product — sounds excellent!');
-render();
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 <img src=x onError="
