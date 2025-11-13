@@ -13,18 +13,6 @@ function playTone(toneFrequency) {
     setTimeout(() => sineWave.stop(), interval)
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 document.querySelector("button.low").addEventListener("click", () => {
     playTone(300);
 });
@@ -33,12 +21,12 @@ document.querySelector("button.high").addEventListener("click", () => {
     playTone(1000);
 });
 
+const dataPoints = [-1, 15, 20, 8, 25];
 
-const dataPoints = [9, 15, 20, 8, 25];
 document.querySelector("button.tones").addEventListener("click", () => {
     dataPoints.forEach((dataPoint, i) => {
         setTimeout(() => {
-            playTone(dataPoint * 15);
+            playTone((dataPoint + 2) * 15);
         }, i * interval);
     })
 });
