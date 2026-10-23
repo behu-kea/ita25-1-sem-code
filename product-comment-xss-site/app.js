@@ -1,10 +1,10 @@
-const commentEl = document.getElementById('comment');
-const postBtn = document.getElementById('post');
-const commentsContainer = document.getElementById('comments');
+const commentEl = document.querySelector('#comment');
+const postBtn = document.querySelector('#post');
+const commentsContainer = document.querySelector('#comments');
 
 const comments = [];
 
-function render() {
+function renderComment() {
     let html = '';
     comments.forEach(comment => {
         html = html + `<div class="comment">${comment}</div>`;
@@ -13,11 +13,15 @@ function render() {
     commentsContainer.innerHTML = html;
 }
 
+function clearComment() {
+    commentEl.value = '';
+}
+
 postBtn.addEventListener('click', () => {
     const text = commentEl.value;
     comments.push(text);
-    render();
-    commentEl.value = '';
+    renderComment();
+    clearComment();
 });
 
 
